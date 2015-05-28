@@ -1,15 +1,22 @@
+package pl.jojczykp.pingpong
+
+import org.mockito.BDDMockito._
 import org.scalatest.FlatSpec
+import org.scalatest.mock.MockitoSugar
 
-class SetSpec extends FlatSpec {
+class MainSpec extends FlatSpec with MockitoSugar {
 
-        "An empty Set" should "have size 0" in {
-		assert(Set.empty.size == 0)
+	trait Context {
+		val MESSAGE = "someMessage"
+		val hello = mock[Hello]
 	}
 
-	it should "produce NoSuchElementException when head is invoked" in {
-		intercept[NoSuchElementException] {
-			Set.empty.head
-		}
+	"Main" should "repeat what hello said" in new Context {
+		given(hello.sayHello).willReturn(MESSAGE)
+
+		val said: String = hello.sayHello
+
+		assert(said == MESSAGE)
 	}
 
 }

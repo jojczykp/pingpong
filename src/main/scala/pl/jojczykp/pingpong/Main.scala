@@ -1,4 +1,8 @@
+package pl.jojczykp.pingpong
+
 object Main extends App {
-	println("Hello World!")
+	def hello: Hello = new Hello
+
+	println(hello.sayHello)
 }
 
