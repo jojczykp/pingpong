@@ -10,5 +10,5 @@ object Main extends App {
 	val pongActor = system.actorOf(Props[PongActor], name="PongActor")
 	val pingActor = system.actorOf(Props(new PingActor(pongActor)), name="PingActor")
 
-	pingActor ! StartMessage(3, "Ala ma kopa!")
+	pingActor ! StartMessage(args(0).toInt, args(1))
 }
