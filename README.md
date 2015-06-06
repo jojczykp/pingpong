@@ -19,7 +19,7 @@ How to start
 
 Legal Notes
 -----------
-	Copyright (C) 2013-2014 Pawe≈Ç Jojczyk
+	Copyright (C) 2013-2014 Pawe≥Ç Jojczyk
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
